@@ -2,13 +2,14 @@ from soco import discover
 from enum import Enum
 
 
+
 class Volume(Enum):
     UP = 1
     DOWN = -1
     MUTE = 0
 
 
-class Speaker(Enum):
+class Speaker(str, Enum):
     Living_Room = "Living Room"
     Kitchen = "Kitchen"
     Roam = "Roam"

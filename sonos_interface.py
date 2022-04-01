@@ -8,6 +8,14 @@ class Volume(Enum):
     MUTE = 0
 
 
+class Speaker(Enum):
+    Living_Room = "Living Room"
+    Kitchen = "Kitchen"
+    Roam = "Roam"
+    Hall = "Hall"
+    Move = "Move"
+
+
 def select_speaker(speaker_name):
     for speaker in discover():
         if speaker.player_name == speaker_name:

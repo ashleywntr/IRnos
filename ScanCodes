@@ -1,0 +1,4 @@
+Volume UP = 0x402
+Volume DOWN = 0x403
+
+MUTE = 0x409

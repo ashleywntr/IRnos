@@ -1,6 +1,5 @@
-# Hello
 
 
-print("Hello world")
+
 
 

@@ -2,7 +2,6 @@ from soco import discover
 from enum import Enum
 
 
-
 class Volume(Enum):
     UP = 1
     DOWN = -1

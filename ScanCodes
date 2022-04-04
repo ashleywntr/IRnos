@@ -1,4 +1,12 @@
+http://www.ignorantofthings.com/2022/03/receiving-infrared-on-raspberry-pi-with.html?m=1
+
 Volume UP = 0x402
 Volume DOWN = 0x403
 
 MUTE = 0x409
+
+rc.local for boot scripts
+Load all scan codes
+
+sudo nano /etc/rc.local
+ir-keytable -c -p nec

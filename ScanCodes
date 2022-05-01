@@ -9,4 +9,4 @@ rc.local for boot scripts
 Load all scan codes
 
 sudo nano /etc/rc.local
-ir-keytable -c -p nec
+sudo ir-keytable -c -p nec

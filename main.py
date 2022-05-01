@@ -17,21 +17,23 @@ def startup():
     mute_count = 0
     while True:
         event = device.read_one()
-
-        if event:
-            if event.value == 0x402:
-                print("Volume UP")
-                sonos.volume_logic(Volume.UP, Speaker.Living_Room)
-            elif event.value == 0x403:
-                print("Volume DOWN")
-                sonos.volume_logic(Volume.DOWN, Speaker.Living_Room)
-            elif event.value == 0x409:
-                print("Mute count", mute_count)
-                mute_count += 1
-        if mute_count >= 2:
-            print("MUTE")
-            sonos.volume_logic(Volume.MUTE, Speaker.Living_Room)
-            mute_count = 0
+        try:
+            if event:
+                if event.value == 0x402:
+                    print("Volume UP")
+                    sonos.volume_logic(Volume.UP, Speaker.Living_Room)
+                elif event.value == 0x403:
+                    print("Volume DOWN")
+                    sonos.volume_logic(Volume.DOWN, Speaker.Living_Room)
+                elif event.value == 0x409:
+                    print("Mute count", mute_count)
+                    mute_count += 1
+            if mute_count >= 2:
+                print("MUTE")
+                sonos.volume_logic(Volume.MUTE, Speaker.Living_Room)
+                mute_count = 0
+        except Exception as ex:
+            print(ex)
 
 
 startup()
